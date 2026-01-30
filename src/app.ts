@@ -1,10 +1,12 @@
 import express, { Application, Request, Response } from 'express'
 import helmet from 'helmet'
+import cors from 'cors'
 import todoRoutes from './routes/todo.routes'
 
 const app: Application = express()
 
 app.use(helmet())
+app.use(cors())
 app.use(express.json())
 
 app.use('/api/todos', todoRoutes)
