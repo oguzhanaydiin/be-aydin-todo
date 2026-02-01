@@ -214,7 +214,11 @@ const options: swaggerJsdoc.Options = {
       },
     },
   },
-  apis: ['./src/routes/*.ts'],
+  apis: [
+    './src/routes/*.ts',  // For local
+    './dist/routes/*.js', // For Docker
+    './routes/*.js'       // Backup
+  ],
 }
 
 const swaggerSpec = swaggerJsdoc(options)
