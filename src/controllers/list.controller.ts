@@ -29,7 +29,7 @@ export const createList = async (req: Request, res: Response, next: NextFunction
 
     const list = await ListModel.create(validData)
 
-    return res.status(201).json({
+    return res.status(200).json({
       success: true,
       data: list,
     })
