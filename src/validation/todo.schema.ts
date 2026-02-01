@@ -9,6 +9,9 @@ export const createTodoSchema = z.object({
     .string()
     .max(100, 'Description must be less than 100 characters')
     .optional(),
+  listName: z
+    .string()
+    .max(15, 'list name must be less than 15 caharacters'),
   completed: z.boolean().optional(),
 })
 
