@@ -1,8 +1,7 @@
 # Aydin Todo API
-This is an express API with typescript for the AydinTodo project.
-
-# be-aydin-todo
 Backend API for the Aydin Todo application. Provides endpoints for managing lists, todos, and error logs.
+
+preview: https://be-aydin-todo.onrender.com/api-docs
 
 ## Endpoints
 
