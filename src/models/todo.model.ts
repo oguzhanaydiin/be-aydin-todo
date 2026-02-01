@@ -6,6 +6,7 @@ const COLLECTION = 'todos'
 export interface Todo {
   _id?: ObjectId
   title: string
+  listName: string
   description?: string
   completed: boolean
   deleted: boolean
@@ -16,6 +17,7 @@ export interface Todo {
 
 export interface CreateTodoDto {
   title: string
+  listName: string
   description?: string
   completed?: boolean
 }
@@ -42,6 +44,7 @@ export const create = async (data: CreateTodoDto): Promise<Todo> => {
   const todo: Omit<Todo, '_id'> = {
     title: data.title,
     description: data.description,
+    listName: data.listName,
     completed: data.completed || false,
     deleted: false,
     createdAt: now,
