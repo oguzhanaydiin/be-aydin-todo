@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from 'express'
 import helmet from 'helmet'
 import cors from 'cors'
 import todoRoutes from './routes/todo.routes'
+import listRoutes from './routes/list.routes'
 import errorLogRoutes from './routes/errorLog.routes'
 import { errorHandler } from './middleware/errorHandler'
 
@@ -12,6 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/todos', todoRoutes)
+app.use('/api/lists', listRoutes)
 app.use('/api/error-logs', errorLogRoutes)
 
 app.get('/health', (_req: Request, res: Response) => {
